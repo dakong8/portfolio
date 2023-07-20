@@ -1,0 +1,2249 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif&family=PT+Sans:wght@400;700&display=swap');
+
+/* reset */
+
+body, div, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, table, tr, th, td, form, fieldset, legend, input, label, textarea, select, button, a { margin: 0; padding: 0; }
+body, h1, h2, h3, h4, h5, h6, a { font-size: 0.625rem; line-height: 1; font-family: 'PT Sans', sans-serif; }
+html { font-size: 0.625rem; }
+a { text-decoration: none; color: #000; }
+ul,ol,li { list-style: none; }
+img,fieldset { border: none; vertical-align: middle; }
+em,b,i { font-weight: normal; font-style: normal; }
+button { border: none; background-color: transparent; cursor: pointer; font-family: 'Lato', sans-serif; }
+body { overflow-x: hidden }
+
+/* common */
+
+.blind {
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+.clearfix:after {
+    content: ''; 
+    display: block; 
+    clear: both;
+}
+.mobile {}
+.pc { display: none; }
+
+.title {
+    font-size: 3rem; font-weight: normal;
+    font-family: 'Inria Serif', serif;
+}
+.outline_top {
+	display: block;
+	position: absolute; 
+    top: 0; left: 0;
+	width: 100%; height: 1px;
+	background-color: #fff; 
+}
+.outline_right {
+	display: block;
+	position: absolute; 
+    top: 0; right: 0;
+	width: 1px; height: 100%;
+	background-color: #fff;
+}
+.outline_bottom {
+	display: block;
+	position: absolute; 
+    bottom: 0; right: 0;
+	width: 100%; height: 1px;
+	background-color: #fff;
+}
+.outline_left {
+	display: block;
+	position: absolute; 
+    bottom: 0; left: 0;
+	width: 1px; height: 100%;
+	background-color: #fff;
+}
+.visual_inline > .outline_top {
+    right: 0; left: inherit;
+}
+.visual_inline > .outline_right {
+    bottom: 0; top: auto;
+}
+.visual_inline > .outline_bottom {
+    left: 0; right: inherit;
+}
+.visual_inline > .outline_left {
+    top: 0; bottom: inherit;
+}
+.st0 {
+	fill: none;
+	stroke: #fff; 
+    stroke-width: 1px;
+}
+.fill {
+	animation: svgFill 1.5s forwards;
+}
+
+
+
+/* main mobile 375 */
+
+/* header */
+
+#header {
+	position: relative;
+	width: 100%; height: 683px;
+	background: url(../img/Hilton-exterior.jpg) no-repeat center;
+	background-size: cover;
+}
+#header .navWrap {
+	position: relative;
+}
+#header .navWrap > .navLogo {
+	position: absolute; 
+    top: 28px; left: 8.667%; /* (65/750)*100 */
+}
+#header .navWrap h1 a {
+	display: block;
+	width: 60px;
+} 
+#header .navWrap h1 a img {
+    width: 100%;
+}
+#header .navWrap .navBtn {
+	position: absolute; 
+    top: 40px; right: 8.666%; /* (65/750)*100 */ 
+    z-index: 10;
+	width: 35px; height: 25px;
+}
+#header .navWrap .navBtn span {
+	display: block;
+	width: 35px; height: 1px;
+	margin-bottom: 11px;
+	background-color: #fff; 
+    text-indent: -9999px;
+    transition: 0.3s;
+}
+#header .navWrap .navBtn span:last-child {
+    margin-bottom: 0;
+}
+#header .navWrap .navBtn.on {
+	position: fixed;
+}
+#header .navWrap .navBtn.on span:nth-child(1) {
+	transform: translateY(12px) rotate(45deg);
+}
+#header .navWrap .navBtn.on span:nth-child(2) {
+	opacity: 0;
+}
+#header .navWrap .navBtn.on span:nth-child(3) {
+	transform: translateY(-12px) rotate(-45deg);
+}
+nav {
+	display: none;
+	position: fixed; 
+    top: 0; left: 0; 
+    z-index: 1;
+	width: 100%; height: 100%;
+	background-color: rgba(5,31,56,.97);
+}
+nav .menu {
+	position: absolute; 
+    top: 22vh; left: 8.667%;
+}
+nav .menu > li {
+	position: relative;
+	margin-bottom: 45px;
+}
+nav .menu > li > a {
+	position: relative;
+	color: #fff; 
+    font-size: 4rem; font-weight: bold; 
+	transition: 0.3s;
+}
+nav .menu > li > a:hover {
+	color: #ff4b30; 
+}
+nav .menu > li > a:after {
+	content:'';
+	position: absolute; 
+    bottom: 0; left: 0;
+	width: 0; height: 5px;
+	background-color: #ff4b30;
+	transition: 0.3s;
+}
+nav .menu > li > a:hover:after {
+	width: 100%; 
+}
+nav img {
+	position: absolute; 
+    bottom: 50px; left: 50%;
+    width: 50px; 
+	margin-left: -25px;
+}
+
+
+/* visual */
+
+.visual > .visualWrap {
+	position: absolute;
+    top: 118px; left: 50%;
+	width: 82.667%; height: 514px;
+	margin-left: -41.333%; 
+}
+.visual > .visualWrap .visual_outline {
+	position: relative;
+	width: 100%; height: 100%;
+}
+.visual_outline > span:nth-child(odd) {
+	animation: wSizeUp 2s forwards;
+}
+.visual_outline > span:nth-child(even) {
+	animation: hSizeUp 2s forwards;
+}
+.visual_inline > span:nth-child(odd) {
+	animation: wSizeUp 2s forwards;
+}
+.visual_inline > span:nth-child(even) {
+	animation: hSizeUp 2s forwards;
+}
+.visual > .visualWrap .visual_outline .visual_inline {
+	position: relative; 
+    top: 50%;
+	width: 93.226%; height: 493px;
+	margin-left: 3.226%; 
+    transform: translateY(-50%);
+}
+.visual .visualTitle {
+	position: absolute; 
+    top: 288px; left: 50%; 
+	transform: translateX(-50%);
+	width: 155px; height: auto;
+}
+
+
+/* mainContents */
+/* seoul section */
+
+#seoul {
+	width: 100%;
+	padding: 40px 0 50px;
+	background: url(../img/seoul-bg-pattern-mobile.jpg) no-repeat;
+	background-size: 133px; 
+    background-position: right top -11px;
+}
+#seoul .seoul_square {
+	position: relative; 
+	width: 0; height: 73px;
+	margin-left: 8.666%;
+	background-color: #cdd9f0;
+    transition: 0.8s;
+}
+#seoul .seoul_square.active {
+	width: 73px; 
+}
+#seoul .seoul_square .titleWrap {
+	position: absolute; 
+    top: 16px; left: 27.586%;
+    width: 200px;
+	transform: translateX(-5%);
+	opacity: 0; 
+    transition: 0.8s;
+}
+#seoul .seoul_square .titleWrap.active {
+	transform: translateX(0);
+	opacity: 1;
+}
+#seoul .seoul_square .titleWrap p {
+	font-size: 1.7rem; font-family: "Inria Serif", serif;
+}
+#seoul .seoul_contentsWrap {
+	width: 82.667%;
+	margin: 0 auto; 
+    padding-top: 27px;
+}
+#seoul .seoul_contentsWrap .seoulImg {
+	width: 100%; height: 242px;
+	background: url(../img/Hilton-exterior3.jpg) no-repeat center;
+	background-size: cover;
+	transform: translateY(50%);
+	opacity: 0; 
+    transition: 0.8s;
+}
+#seoul .seoul_contentsWrap .seoulImg.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+#seoul .seoul_contentsWrap .seoul_txt {
+	text-align: center;
+	transform: translateY(50%);
+	opacity: 0; 
+    transition: 0.8s;
+}
+#seoul .seoul_contentsWrap .seoul_txt.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+#seoul .seoul_contentsWrap .seoul_txt .navy_bar {
+	display: block;
+	width: 0; height: 3px;
+	margin: 25px auto 20px;
+	background-color: #051f38; 
+    transition: 0.8s;
+}
+#seoul .seoul_contentsWrap .seoul_txt .navy_bar.active {
+	width: 50px;
+}
+#seoul .seoul_contentsWrap .seoul_txt p {
+	font-size: 1.6rem; 
+    line-height: 26px;
+	margin-bottom: 27px;
+}
+#seoul .seoul_contentsWrap .seoul_txt .seoulBtn {
+	display: block;
+	position: relative; 
+	width: 150px; height: 50px;
+	background-color: #051f38; 
+    margin: 0 auto;
+	color: #fff; 
+    font-size: 1.6rem; 
+    line-height: 50px;
+    transition: 0.3s;
+}
+#seoul .seoul_contentsWrap .seoul_txt .seoulBtn:hover {
+    background-color: #ff4b30;
+}
+#seoul .seoul_contentsWrap .seoul_txt .seoulBtn:after {
+	content: '';
+	position: absolute;
+    bottom: 14px; left: 50%;
+	width: 0; height: 1px; 
+	transition: 0.3s;
+}
+#seoul .seoul_contentsWrap .seoul_txt .seoulBtn:hover:after {
+	width: 76px;
+	margin-left: -38px;
+	background-color: #fff; 
+}
+
+
+/* rooms section */
+
+#rooms {
+	padding: 35px 0;
+	background-color: #f0f0f0;
+}
+#rooms > div > div {
+	position: relative; 
+	width: 97.067%; height: 315px;
+	margin: 0 auto 15px; 
+    color: #fff;
+    font-family: "Inria Serif", serif;
+	text-align: center;
+    background: url(../img/hilton-geustroom-mobile.jpg) no-repeat;
+    background-size: cover;
+	transform: translateY(40%);
+	opacity: 0; 
+    transition: 0.8s;
+}
+#rooms .guestRoom.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+#rooms .executiveRoom.active {
+	transform: translateY(0);
+	opacity: 1; 
+}#rooms .suite.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+#rooms > div > div > div > .borderBox {
+	position: absolute; 
+    top: 50%; left: 50%; 
+	width: 90.667%; height: 290px;
+	transform: translate(-50%,-50%);
+	background-color: rgba(0,0,0,0.3);
+}
+#rooms > div > div.active > div > .borderBox > span:nth-child(odd) {
+	animation: wSizeUp 2s;
+}
+#rooms > div > div.active > div > .borderBox > span:nth-child(even) {
+	animation: hSizeUp 2s;
+}
+#rooms > div > div > div > .borderBox > .textWrap {
+	position: absolute; 
+    top: 50%; left: 0; 
+	transform: translateY(-30%);
+	opacity: 0; 
+    transition: 0.8s;
+}
+#rooms > div > div > div > .borderBox > .textWrap.active {
+	transform: translateY(-50%);
+	opacity: 1;
+}
+#rooms > div > div > div > .borderBox > .textWrap > b {
+	font-size: 2.5rem;
+}
+#rooms > div > div > div > .borderBox > .textWrap > p {
+	font-size: 1.3rem; 
+    line-height: 20px;
+	width: 90.294%; /*614*/
+    margin: 40px auto;
+}
+#rooms > div > div > div > .borderBox > .textWrap > .opacityBox {
+	padding: 10px 24px; 
+    position: relative; 
+	background-color: rgba(0,0,0,0.5);
+	color: #fff; 
+    font-family: "Inria Serif", serif; font-size: 1.4rem;
+	transition: 0.3s;
+}
+#rooms > div > div > div > .borderBox > .textWrap > .opacityBox:hover {
+	background-color: rgba(0,0,0,0.7); 
+}
+#rooms > div > div > div > .borderBox > .textWrap > .opacityBox:after {
+	content: '';
+	position: absolute; 
+    bottom: 8px; left: 50%;
+	width: 0; height: 1px; 
+	transition: 0.3s;
+}
+#rooms > div > div > div > .borderBox > .textWrap > .opacityBox:hover:after {
+	width: 156px; 
+	margin-left: -78px;
+	background-color: #fff; 
+}
+#rooms > div > div:nth-of-type(2) > div > .borderBox > .textWrap > .opacityBox:hover:after {
+	width: 184px; 
+    margin-left: -92px;
+}
+#rooms > div > div:nth-of-type(3) > div > .borderBox > .textWrap > .opacityBox:hover:after {
+	width: 108px; 
+    margin-left: -54px;
+}
+#rooms > div > .executiveRoom {
+	background-image: url(../img/hilton-executiveroom-mobile.jpg);
+}
+#rooms > div > .suite {
+	background-image: url(../img/hilton-suite-mobile.jpg);
+	margin-bottom: 0;
+}
+
+
+/* service section */
+
+#services {
+	padding-top: 50px;
+	overflow: hidden;
+}
+#services .titleWrap {
+	position: relative; 
+}
+#services .titleWrap .square_services {
+	width: 0; height: 30px;
+	margin-left: 14%;
+	background-color: #cdd9f0;
+	transition: 0.8s;
+}
+#services .titleWrap .square_services.active {
+	width: 135px;
+}
+#services .titleWrap > .title {
+	position: absolute; 
+    top: 15px; left: 8.666%; 
+	transform: translateX(-10%);
+	opacity: 0; 
+    transition: 0.8s;
+}
+#services .titleWrap > .title.active {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+
+/* spa section */
+
+#services .spa {
+	margin-top: 46px;
+}
+#services .spa .spaWrap > .spaImg {
+	width: 100%; height: 275px;
+	background: url(../img/hilton-spa.jpg) no-repeat;
+	background-size: cover; 
+    transition: 0.8s;
+	transform: translateX(-30%);
+	opacity: 0;
+}
+#services .spa .spaWrap > .spaImg.active {
+	transform: translateX(0);
+	opacity: 1;
+}
+#services .contents {
+	position: relative; 
+    overflow: hidden;
+	padding: 27px 0; 
+    margin-top: 30px;
+	background-color: #051f38;
+	color: #fff;
+	transform: translateX(30%);
+	opacity: 0; 
+    transition: 0.8s;
+}
+#services .spa .spaWrap > .contents.active {
+	transform: translateX(0);
+	opacity: 1;
+}
+#services .contents b {
+	float: left;
+	position: absolute; 
+    top: 50%; left: 8.666%; 
+    transform: translateY(-50%);
+	font-family: "Inria Serif", serif; font-size: 2.5rem;
+}
+#services .contents p {
+	float: right;
+	width: 48.8%;
+	margin-right: 8%;
+	font-size: 1.4rem; 
+    line-height: 22px;
+}
+#services .spa .spaWrap > .contents .spaLine {
+	position: absolute; 
+    top: 50%; left: 31.333%; 
+	width: 1px; height: 0;
+	transform: translateY(-50%);
+	background-color: #fff; 
+    transition: 1s;
+}
+#services .spa .spaWrap > .contents .spaLine.active {
+	height: 75px;
+}
+
+
+/* dinning section */
+
+#services .service_bg {
+	background: url(../img/services-bg-img.jpg) no-repeat center top;
+	background-size: cover;
+}
+#services .dinning {
+	margin-top: 82px;
+}
+#services .dinning .dinningImg {
+	width: 100%; height: 275px;
+	background: url(../img/hilton-dinning.jpg) no-repeat center;
+	background-size: cover; 
+    transition: 0.8s;
+	transform: translateX(-30%);
+	opacity: 0;
+}
+#services .dinning .dinningImg.active {
+	transform: translateX(0);
+	opacity: 1;
+}
+#services .dinning .contents {
+	margin-top: 30px;
+	background-color: rgba(255,255,255,0.7);
+}
+#services .dinning .contents.active {
+	transform: translateX(0);
+	opacity: 1;
+}
+#services .dinning .contents b {
+    color: #000;
+}
+#services .dinning .contents .dinningLine {
+	position: absolute; 
+    top: 50%; left: 41.2%; 
+	width: 1px; height: 0;
+	transform: translateY(-50%);
+	background-color: #000;
+	transition: 1s;
+}
+#services .dinning .contents .dinningLine.active {
+	height: 75px;
+}
+#services .dinning .contents p {
+	width: 45.2%; 
+    color: #000;
+}
+
+
+/* restaurant section */
+
+#services .restaurant {
+	margin-top: 35px;
+}
+#services .restaurant .titleBox {
+	position: relative; 
+	width: 0; height: 35px;
+	background-color: #ff4b30;
+	transition: 0.8s;
+}
+#services .restaurant .titleBox.active {
+	width: 53.867%;
+}
+#services .restaurant .titleBox b {
+	position: absolute; 
+    right: 2.667%; /* 20/750*100*/ 
+	font-size: 2rem; 
+    color: #fff; 
+    line-height: 35px;
+}
+#services .restaurant .slideBox {
+	margin-top: 27px;
+}
+#services .restaurant .slideBox .slideList > .slideImg > div {
+	width: 97.067%; height: 125px;
+	margin: 0 auto 15px;
+	text-align: center;
+    background: url(../img/restaurant-cafe395-mobile.jpg) no-repeat center;
+    background-size: cover;
+	transform: translateY(50%);
+	opacity: 0; 
+    transition: 0.8s;
+}
+#services .restaurant .slideBox .slideList > .slideImg .genjiImg {
+	background-image: url(../img/restaurant-genji-mobile.jpg);
+}
+#services .restaurant .slideBox .slideList > .slideImg .ilponteImg {
+	background-image: url(../img/restaurant-ilponte-mobile.jpg);
+    margin-bottom: 0;
+}
+#services .restaurant .slideBox .slideList > .slideImg > div.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+#services .restaurant .slideBox .slideList > .slideImg > div > a {
+	display: block;
+	width: 100%; height: 100%;
+	font-size: 1.7rem; 
+    color: #fff; 
+    line-height: 125px;
+}
+#services .restaurant .vmBtn {
+	display: inline-block;
+	position: relative; 
+    left: 50%; 
+	width: 150px; height: 50px;
+	margin: 25px auto 45px -75px;
+	background-color: #051f38;
+	color: #fff; 
+    font-size: 1.6rem; 
+    line-height: 50px; 
+    text-align: center;
+	transform: translateY(50%);
+	opacity: 0; 
+    transition: 0.3s;
+}
+#services .restaurant .vmBtn.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+#services .restaurant .vmBtn:hover {
+    background-color: #ff4b30;
+}
+#services .restaurant .vmBtn:after {
+	content: '';
+	position: absolute; 
+    bottom: 15px; left: 50%; 
+	width: 0; height: 1px;
+	transition: 0.3s;
+}
+#services .restaurant .vmBtn:hover:after {
+	width: 84px;
+	margin-left: -42px;
+	background-color: #fff; 
+}
+
+
+/* memory section */
+
+#memory {
+	padding: 55px 0;
+	background: url(../img/memory-bg-img.jpg) no-repeat center;
+	background-size: cover;
+}
+#memory .titleWrap {
+	margin-left: 8.666%;
+}
+#memory .titleWrap h3 {
+	color: #fff;
+	transform: translateX(-10%);
+	opacity: 0; 
+    transition: 0.8s;
+}
+#memory .titleWrap h3.active {
+	transform: translateX(0);
+	opacity: 1;
+}
+#memory .titleWrap:after {
+	content: ''; 
+    display: block;
+	width: 0; height: 1px;
+	margin-left: 28px;
+	background-color: #fff;
+	transition: 0.8s;
+}
+#memory .titleWrap.active:after {
+	width: 212px;
+}
+#memory .memoryWrap {
+	width: 82.667%;
+	margin: 50px auto 0;
+	overflow: hidden;
+}
+#memory .memoryWrap .memoryContents > div {
+    float: left;
+	width: 46.774%; height: 145px;
+	margin-right: 6.452%;
+    position: relative;
+    background: url(../img/memory-healing.jpg) no-repeat center;
+	background-size: 100% auto;
+    transform: translateY(20%);
+	opacity: 0; 
+    transition: 0.3s;
+}
+#memory .memoryWrap .memoryContents > div:nth-child(even) {
+	margin-right: 0;
+}
+#memory .memoryWrap .memoryContents > div.active {
+	transform: translateY(0);
+	opacity: 1; 
+}
+#memory .memoryWrap .memoryContents .family {
+	background-image: url(../img/memory-family.jpg);
+    margin-bottom: 20px;
+}
+#memory .memoryWrap .memoryContents .couple {
+	background-image: url(../img/memory-couple.jpg);
+}
+#memory .memoryWrap .memoryContents .friends {
+	background-image: url(../img/memory-friends.jpg);
+}
+#memory .memoryWrap .memoryContents > div:hover {
+	background-size: 110% auto; 
+}
+#memory .memoryWrap .memoryContents > div > .memoryTitle {
+	position: absolute; 
+    bottom: 0; 
+	width: 100%; height: 30px;
+	background-color: rgba(255,255,255,0.7);
+}
+#memory .memoryWrap .memoryContents > div > .memoryTitle > b {
+	margin-left: 11px;
+	line-height: 30px; 
+    font-size: 1.4rem;
+}
+#memory .memoryWrap .memoryContents > div > .memoryTitle > .memory_square {
+	position: absolute; 
+    top: 0; right: 0; 
+	width: 30px; height: 30px;
+	background-color: #051f38; 
+    transition: 0.3s;
+}
+#memory .memoryWrap .memoryContents > div:hover > .memoryTitle > .memory_square {
+	background-color: #ff4b30; 
+}
+#memory .memoryWrap .memoryContents > div > .memoryTitle > .memory_square > a {
+	display: block; 
+    text-align: center;
+    line-height: 30px;
+}
+#memory .memoryWrap .memoryContents > div > .memoryTitle > .memory_square > a > img {
+	height: 16px;
+}
+
+
+/* newsletter section */
+
+#memory .newsletter {
+	margin-top: 50px;
+	transform: translateY(30%);
+	opacity: 0; 
+    transition: 0.8s;
+}
+#memory .newsletter.active {
+	transform: translateY(0);
+	opacity: 1;
+}
+#memory .newsletter h4 {
+	text-align: center;
+	color: #fff; 
+    font-size: 2.5rem;
+}
+#memory .newsletter .enterBox {
+	margin: 30px auto 0;
+}
+#memory .newsletter .enterBox form input  {
+	float: left;
+	width: 75%; height: 40px;
+	padding-left: 1.613%;
+	color: #666666; 
+    font-size: 1.4rem; 
+    line-height: 40px;
+	background-color: #fff;
+	border: none;
+}
+#memory .newsletter .enterBox > form > button {
+	float: left;
+	width: 23.387%; height: 40px;
+	color: #fff; 
+    font-size: 1.2rem; 
+	background-color: #051f38; 
+    transition: 0.2s;
+}
+#memory .newsletter .enterBox > form > button:hover {
+	background-color: #ff4b30; 
+}
+#memory .newsletter .agreeBox {
+	padding-top: 58px;
+}
+#memory .newsletter .agreeBox input {
+	float: left;
+	width: 4.032%; 
+    margin-top: 5px;
+	cursor: pointer;
+}
+#memory .newsletter .agreeBox span {
+	float: left;
+	width: 93.548%;
+	margin-left: 1.333%;
+	color: #fff; 
+    font-size: 1.4rem; 
+    line-height: 18px;
+	cursor: pointer;
+}
+#memory .newsletter .agreeBox span > b {
+	text-decoration: underline;
+}
+
+
+/* footer */
+
+footer {
+	padding: 20px 0 100px;
+	background-color: #051f38;
+}
+footer .footerWrap {
+	width: 82.667%;
+	margin: 0 auto;
+}
+footer .footerWrap > img {
+	display: block;
+	width: 17.419%;
+	margin: 0 auto;
+}
+footer .footerWrap > .footerUnderline {
+	display: block;
+	width: 100%; height: 1px;
+	margin: 20px 0;
+	background-color: #fff;
+}
+footer .footerWrap .footerContents {
+	color: #fff; 
+    font-size: 1.6rem;
+}
+footer .footerWrap .footerContents > .contact > div:first-child {
+	margin-bottom: 20px; 
+}
+footer .footerWrap .footerContents > .contact > div > b {
+	float: left;
+	font-weight: bold;
+}
+footer .footerWrap .footerContents > .contact > div > ul {
+	width: 76.613%;
+	margin-left: 23.387%;
+	font-size: 1.4rem;
+}
+footer .footerWrap .footerContents .contact .bookWrap ul > li:first-child {
+	margin-bottom: 5px;
+}
+footer .footerWrap .footerContents .contentsWrap {
+	margin-top: 30px;
+}
+footer .footerWrap .footerContents .contentsWrap .copy {
+	font-size: 1.2rem;
+}
+footer .footerWrap .footerContents .contentsWrap .copy > b {
+	font-size: 2rem; 
+    font-weight: bold;
+}
+footer .footerWrap .footerContents .contentsWrap .copy > p {
+	margin: 4px 0;
+}
+footer .footerWrap .footerContents .sitemap {
+	width: 100%;
+	padding-top: 30px;
+}
+footer .footerWrap .footerContents .sitemap > ul {
+	overflow: hidden;
+}
+footer .footerWrap .footerContents .sitemap > ul > li {
+	float: left;
+	margin-right: 10.484%;
+}
+footer .footerWrap .footerContents .sitemap > ul > li:nth-child(3) {
+	margin-right: 0;
+}
+footer .footerWrap .footerContents .sitemap > ul > li:nth-child(4), footer .footerWrap .footerContents .sitemap > ul > li:nth-child(5) {
+	margin-top: 20px; 
+}
+footer .footerWrap .footerContents .sitemap > ul > li b {
+	font-weight: bold;
+}
+footer .footerWrap .footerContents .sitemap > ul > li a {
+	color: #fff; 
+    font-size: 1.5rem;
+}
+footer .footerWrap .footerContents .sitemap > ul > li a:hover {
+	color: #ff4b30;
+}
+footer .footerWrap .footerContents .snsWrap {
+	padding-top: 30px;
+}
+footer .footerWrap .footerContents .snsWrap ul {
+	overflow: hidden;
+	width: 40.323%;
+	margin: 0 auto;
+}
+footer .footerWrap .footerContents .snsWrap ul > li {
+	float: left;
+	width: 24%;
+	margin-right: 14%;
+}
+footer .footerWrap .footerContents .snsWrap ul > li:last-child {
+	margin-right: 0;
+}
+footer .footerWrap .footerContents .snsWrap ul > li img {
+	width: 100%;
+}
+
+
+
+/* mediaquery */
+
+/* tablet 768 */
+
+@media only screen and (min-width: 768px){
+	
+	.title { font-size: 6rem; }
+	
+    
+	/* header */
+    
+	#header {
+		height: 1000px;
+	}
+	#header .navWrap .navLogo {
+		top: 21px; left: 9.635%;
+	}
+	#header .navWrap h1 a {
+		width: 75px;
+	}
+	#header .navWrap .navBtn {
+		top: 38px; right: 9.635%;
+	}
+	nav .menu {
+		top: 17vh; left: 9.635%;
+	}
+	nav .menu > li {
+		margin-bottom: 70px;
+	}
+	nav .menu > li > a {
+		font-size: 6.5rem;
+	}
+	nav .menu > li > a:after {
+		height: 10px;
+	}
+	nav .menu > li > a:hover:after {
+		height: 10px;
+	}
+	nav img {
+		width: 100px;
+		margin-left: -50px;
+	}
+
+    
+	/* visual */
+    
+	.visual > .visualWrap {
+		top: 143px;
+		width: 80.729%;  height: 713px;
+		margin-left: -40.365%; 
+	}
+	.visual > .visualWrap .visual_outline .visual_inline {
+		height: 675px;
+	}
+	.visual .visualTitle {
+		top: 325px;
+		width: 307px;
+	}
+
+	
+	/* seoul section */
+    
+	#seoul {
+		padding: 55px 0 67px;
+		background-size: 266px;
+	}
+	#seoul .seoul_square {
+		height: 145px;
+		margin-left: 9.635%;
+	}
+	#seoul .seoul_square.active {
+		width: 145px;
+	}
+	#seoul .seoul_square .titleWrap {
+		top: 29px; left: 27.586%;
+        width: 400px;
+	}
+	#seoul .seoul_square .titleWrap p {
+		font-size: 3.2rem;
+	}
+	#seoul .seoul_contentsWrap {
+		width: 80.729%;	
+        padding-top: 55px;
+	}
+	#seoul .seoul_contentsWrap .seoulImg {
+		height: 485px;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt .navy_bar {
+		height: 5px;
+		margin: 50px auto 38px;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt .navy_bar.active {
+		width: 100px;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt p {
+		font-size: 2.2rem; 
+        line-height: 35px;
+		margin-bottom: 55px;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt .seoulBtn {
+		width: 230px; height: 60px;
+		font-size: 2rem; 
+        line-height: 60px;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt .seoulBtn:after { 
+        bottom: 17px; 
+	}
+	#seoul .seoul_contentsWrap .seoul_txt .seoulBtn:hover:after {
+        width: 98px;
+        margin-left: -49px;
+	}
+
+	
+	/* rooms section*/
+    
+	#rooms {
+		padding: 70px 0;
+	}
+	#rooms > div > div {
+		width: 94.792%; height: 135px;
+		margin-bottom: 30px; 
+        overflow: hidden;
+	}
+    #rooms > div > div:hover {
+        height: 630px;
+    }
+	#rooms > div > div > b {
+        display: block;
+		font-size: 5rem;
+		line-height: 135px;
+        transition: 0.2s;
+	}
+    #rooms > div > div:hover > b {
+        opacity: 0;
+    }
+	#rooms > div > div > div > .borderBox {
+		width: 93.407%; height: 0;
+        opacity: 0;
+        transition: 0.3s;
+	}
+    #rooms > div > div:hover > div > .borderBox {
+		height: 580px;
+        opacity: 1;
+	}
+    #rooms > div > div > div > .borderBox > span:nth-child(odd) {
+		width: 0;
+        transition: 2s;
+	}
+	#rooms > div > div:hover > div > .borderBox > span:nth-child(odd) {
+		width: 100%; 
+	}
+	#rooms > div > div span:nth-child(even) {
+		height: 0;
+        transition: 2s;
+	}
+	#rooms > div > div:hover span:nth-child(even) {
+		height: 100%; 
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > b {
+	    font-size: 5rem;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > p {
+	    font-size: 1.8rem; 
+        line-height: 28px;
+	    width: 82.353%; 
+        margin-top: 80px;
+        margin-bottom: 120px;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > .opacityBox {
+		padding: 18px 40px;
+        font-size: 2rem;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > .opacityBox:after {
+		bottom: 15px;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > .opacityBox:hover:after {
+		width: 220px;
+		margin-left: -110px;
+	}
+	#rooms > div > div:nth-of-type(2) > div > .borderBox > .textWrap > .opacityBox:hover:after {
+		width: 262px; 
+        margin-left: -131px;
+	}
+	#rooms > div > div:nth-of-type(3) > div > .borderBox > .textWrap > .opacityBox:hover:after {
+		width: 152px; 
+        margin-left: -76px;
+	}
+	
+	
+	/* service section*/
+    
+	#services {
+		padding-top: 100px;
+	}
+	#services .titleWrap .square_services {
+		height: 60px;
+		margin-left: 14.844%;
+	}
+	#services .titleWrap .square_services.active {
+	    width: 270px;
+    }
+	#services .titleWrap > .title {
+		top: 30px; left: 9.635%;
+	}
+	
+    
+	/* spa section */
+    
+	#services .spa {
+		margin-top: 90px;
+	}
+	#services .spa .spaWrap > .spaImg {
+		height: 550px;
+	}
+	#services .contents {
+		padding: 55px 0; 
+        margin-top: 40px;
+	}
+	#services .contents b {
+		left: 9.635%;
+		font-size: 5rem;
+	}
+	#services .spa .spaWrap > .contents .spaLine {
+		left: 31.771%;
+	}
+	#services .spa .spaWrap > .contents .spaLine.active {
+	    height: 150px;
+    }
+	#services .spa .spaWrap > .contents p {
+		width: 43.75%;
+		margin-right: 9.635%;
+		font-size: 2.2rem; 
+        line-height: 35px;	
+	}
+	
+    
+	/* dinning section*/
+    
+	#services .dinning {
+		margin-top: 163px;
+	}
+	#services .dinning .dinningImg {
+		height: 550px;
+	}
+	#services .dinning .contents {
+		margin-top: 35px;
+	}
+	#services .dinning .contents .dinningLine {
+		left: 42.4%;
+	}
+	#services .dinning .contents .dinningLine.active {
+		height: 150px;
+	}
+	#services .dinning .contents p {
+		width: 43.62%;
+		margin-right: 8.464%;
+		font-size: 2.2rem; 
+        line-height: 35px;
+	}
+    
+    
+    /* restaurant section */
+
+	#services .restaurant {
+		margin-top: 70px;
+	}
+	#services .restaurant .titleBox {
+		height: 70px;
+	}
+	#services .restaurant .titleBox.active {
+		width: 52.604%;
+	}
+	#services .restaurant .titleBox b {
+		right: 2.604%;
+		font-size: 4rem; 
+        line-height: 70px;
+	}
+	#services .restaurant .slideBox {
+		margin-top: 55px;
+	}
+	#services .restaurant .slideBox .slideList > .slideImg > div {
+        position: relative;
+		width: 94.792%; height: 250px;
+		margin-bottom: 30px;
+	}
+    .slideList > .slideImg > div:after {
+        content:''; 
+    }
+	.slideList > .slideImg > div:hover:after {
+        position: absolute;
+        top: 0; left: 0;
+		width: 100%; height: 100%;
+		background-image: linear-gradient(0deg, rgba(0,0,0,0.5), transparent);
+	}
+	#services .restaurant .slideBox .slideList > .slideImg > div > a {
+		font-size: 3.5rem; 
+        line-height: 250px;
+	}
+	#services .restaurant .vmBtn {
+		width: 200px;
+		margin: 50px 0 90px -100px; 
+        font-size: 2rem;
+	}
+	#services .restaurant .vmBtn:after {
+		bottom: 12px;
+	}
+	#services .restaurant .vmBtn:hover:after { 
+		width: 102px;
+		margin-left: -51px;
+	}
+	
+
+	/* memory section*/
+    
+	#memory {
+		padding: 110px 0 130px;
+	}
+	#memory .titleWrap {
+		margin-left: 9.635%;
+	}
+	#memory .titleWrap:after {
+        margin-left: 55px;
+	}
+	#memory .titleWrap.active:after {
+        width: 425px;
+    }
+	#memory .memoryWrap {
+		width: 80.729%;
+		margin-top: 100px;
+	}
+	#memory .memoryWrap .memoryContents > div {
+		height: 290px;
+	}
+    #memory .memoryWrap .memoryContents .family {
+        margin-bottom: 0;
+    }
+	#memory .memoryWrap .memoryContents > div > .memoryTitle {
+		height: 60px;
+	}
+	#memory .memoryWrap .memoryContents > div > .memoryTitle > b {
+		margin-left: 22px;
+		line-height: 60px; 
+        font-size: 2.5rem;
+	}
+	#memory .memoryWrap .memoryContents > div > .memoryTitle > .memory_square {
+		width: 60px; height: 60px;
+	}
+    #memory .memoryWrap .memoryContents > div > .memoryTitle > .memory_square > a {
+        line-height: 60px;
+    }
+	#memory .memoryWrap .memoryContents > div > .memoryTitle > .memory_square > a > img {
+		height: 28px;
+	}
+	
+    
+	/* newsletter section*/
+    
+	#memory .newsletter {
+		margin-top: 100px;
+	}
+	#memory .newsletter h4 {
+		font-size: 5rem;
+	}
+	#memory .newsletter .enterBox {
+		margin-top: 55px;
+	}
+	#memory .newsletter .enterBox form input  {
+		font-size: 2rem;
+	}
+	#memory .newsletter .enterBox > form > button {
+		font-size: 1.8rem;
+	}
+	#memory .newsletter .agreeBox {
+		padding-top: 55px;
+	}
+	#memory .newsletter .agreeBox input {
+		width: 2.083%;
+	}
+	#memory .newsletter .agreeBox span {
+		font-size: 1.5rem; 
+        line-height: 25px;
+	}
+		
+
+	/* footer */
+    
+	footer {
+		padding: 40px 0 70px;
+	}
+	footer .footerWrap {
+		width: 80.729%;
+	}
+	footer .footerWrap > img {
+		width: 108px;
+	}
+	footer .footerWrap > .footerUnderline {
+		margin: 40px 0;
+	}
+	footer .footerWrap .footerContents {
+		font-size: 1.8rem;
+	}
+	footer .footerWrap .footerContents > .contact {
+        overflow: hidden;
+	}
+	footer .footerWrap .footerContents > .contact > div:first-child {
+		float: left;
+		margin-bottom: 0;
+	}
+	footer .footerWrap .footerContents > .contact > div:last-child {
+		float: right;
+	}
+	footer .footerWrap .footerContents > .contact > div:last-child > b {
+		margin-right: 10%;
+	}
+	footer .footerWrap .footerContents > .contact > div:first-child > ul {
+		width: auto;
+		font-size: 1.6rem; 
+	}
+	footer .footerWrap .footerContents > .contact > div:last-child > ul {
+		width: auto;
+		font-size: 1.6rem; 
+	}
+	footer .footerWrap .footerContents .contentsWrap {
+		position: relative;
+		margin-top: 40px;
+	}
+	footer .footerWrap .footerContents .contentsWrap .copy {
+		font-size: 1.4rem;
+	}	
+	footer .footerWrap .footerContents .contentsWrap .copy > b {
+		font-size: 2.3rem;
+	}
+	footer .footerWrap .footerContents .contentsWrap .copy > p {
+		margin: 10px 0;
+	}
+	footer .footerWrap .footerContents .sitemap {
+		padding-top: 40px;
+	}
+	footer .footerWrap .footerContents .sitemap > ul > li {
+		margin-right: 5.290%;
+	}
+	footer .footerWrap .footerContents .sitemap > ul > li:nth-child(3) {
+		margin-right: 5.290%; 
+        float: left;
+	}
+	footer .footerWrap .footerContents .sitemap > ul > li:nth-child(4) {
+		margin-top: 0; 
+	}
+	footer .footerWrap .footerContents .sitemap > ul > li:nth-child(5) {
+		margin-top: 0; margin-right: 0;
+	}
+	footer .footerWrap .footerContents .sitemap > ul > li a {
+		font-size: 1.8rem;
+	}
+	footer .footerWrap .footerContents .snsWrap {
+		position: absolute; 
+        top: 10px; right: 0;
+		width: 20.645%;
+		padding-top: 0; 
+	}
+	footer .footerWrap .footerContents .snsWrap ul {
+		width: 100%;
+	}
+	footer .footerWrap .footerContents .snsWrap ul > li {
+		width: 23.81%;
+		margin-right: 14.286%;
+	}
+}
+
+
+
+
+/* tablet 1024 */
+
+@media only screen and (min-width: 1024px){
+	
+	.pc { display: block; }
+	
+    
+	/* header */
+    
+	#header .navWrap .navLogo {
+		left: 5.566%; 
+		overflow: hidden;
+	}
+	#header .navWrap .navLogo > .logo {
+		float: left;
+		margin-right: 45px;
+	}
+	#header .navWrap .navLogo > .place {
+		width: 500px;
+		margin-top: 14px;
+	}
+	#header .navWrap .navLogo > .place b {
+		display: block;
+		color: #fff; 
+        font-size: 2.2rem; font-family: "Inria Serif", serif;
+		margin-bottom: 3px;
+	}
+	#header .navWrap .navLogo > .place p {
+		color: #fff; 
+        font-size: 1.5rem; font-family: "Inria Serif", serif;
+	}
+	#header .navWrap .navBtn {
+		right: 5.566%;
+	}
+	nav .menu {
+		top: 10vh; left: 5.566%;
+	}
+	nav .menu > li {
+		margin-bottom: 90px;
+	}
+	nav .menu > li > a {
+		font-size: 8rem;
+	}
+	nav img {
+		top: 35vh; right: 5.566%; left: auto;
+		width: 294px;
+		margin-left: 0;
+	}
+	
+    
+	/* visual */
+    
+	.visual > .visualWrap {
+		top: 144px;
+		width: 88.867%; height: 712px;
+		margin-left: -44.434%; 
+	}
+	.visual > .visualWrap .visual_outline .visual_inline {
+		width: 95.604%; height: 670px;
+		margin-left: 2.088%;
+	}
+	.visual .visualTitle {
+		top: 306px;
+		width: 341px;
+	}
+	
+	
+	/* seoul section */
+    
+	#seoul {
+		padding: 145px 0 166px;
+		background-image: url(../img/seoul-bg-pattern.jpg);
+		background-size: 520px;
+	}
+	#seoul .seoul_square {
+		height: 200px;
+		margin-left: 5.566%;
+	}
+	#seoul .seoul_square.active {
+		width: 200px;
+	}
+	#seoul .seoul_square .titleWrap {
+		top: 50px; left: 20%;
+        width: 500px; 
+	}
+	#seoul .seoul_square .titleWrap p {
+		font-size: 3.5rem;
+	}
+	#seoul .seoul_contentsWrap {
+		position: relative;
+		width: 88.867%;	
+        padding: 0;
+	}
+	#seoul .seoul_contentsWrap .seoulImg {
+		width: 47.802%; height: 634px;
+		background: url(../img/Hilton-exterior2.jpg) no-repeat -50px;
+		transform: translateX(-20%); 
+	}
+	#seoul .seoul_contentsWrap .seoul_txt {
+		position: absolute; 
+        top: 151px; right: 0;
+		width: 47.802%; 
+        text-align: inherit;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt .navy_bar {
+		height: 10px;
+		margin: 0 0 30px 0;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt .navy_bar.active {
+		width: 100%;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt p {
+		font-size: 1.8rem; 
+        line-height: 29px;
+		margin-bottom: 100px;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt .seoulBtn {
+		text-align: center;
+		margin: 0;
+	}
+	
+    
+	/* rooms section*/
+    
+	#rooms {
+		padding: 32px 0;
+	}
+	#rooms > div {
+		width: 94.141%; height: 800px;
+		margin: 0 auto;
+	}
+	#rooms > div > div {
+		float: left;
+		width: 31.950%; height: 100%;
+		margin-right: 2.074%;
+		transform: translateY(10%);
+	}
+    #rooms > div > div:hover {
+        height: 100%;
+    }
+	#rooms > div > div:last-child { margin-right: 0; }
+	#rooms > div > div > b {
+		position: absolute; 
+        top: 50%; left: 50%;
+		width: 100%;
+		margin-left: -50%; 
+        transform: translateY(-50%);
+		font-size: 4rem;
+		opacity: 1; 
+        line-height: inherit;
+	}
+	#rooms > div > div > div > .borderBox {
+		width: 93.506%; height: 780px; 
+	}
+	#rooms > div > div:hover > div > .borderBox {
+        height: 780px;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > b {
+		font-size: 4rem;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > p {
+		width: 80%; 
+        margin-bottom: 80px;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > .opacityBox {
+        padding-right: 20px;
+        padding-left: 20px;
+		font-size: 1.6rem;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > .opacityBox:after {
+		bottom: 16px;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > .opacityBox:hover:after {
+		width: 178px;
+		margin-left: -89px;
+	}
+	#rooms > div > div:nth-of-type(2) > div > .borderBox > .textWrap > .opacityBox:hover:after {
+		width: 214px; 
+        margin-left: -107px;
+	}
+	#rooms > div > div:nth-of-type(3) > div > .borderBox > .textWrap > .opacityBox:hover:after {
+		width: 124px; 
+        margin-left: -62px;
+	}
+	#rooms > .roomsWrap > div {
+		background-size: auto 100%; 
+        transition: 0.3s;
+	}
+	#rooms > .roomsWrap > div:hover {
+		background-size: auto 105%;
+	}
+	#rooms .guestRoom {
+		background-image: url(../img/hilton-geustroom.jpg);
+        background-position: center;
+	}
+	#rooms .executiveRoom {
+		background-image: url(../img/hilton-executiveroom.jpg);
+	}
+	#rooms .suite {
+		background-image: url(../img/hilton-suite.jpg);
+        background-position: center;
+	}
+	
+	
+	/* service section*/
+    
+	#services {
+		padding-top: 120px;
+	}
+	#services .titleWrap .square_services {
+		height: 50px;
+		margin-left: 13.281%;
+	}
+	#services .titleWrap .square_services.active {
+		width: 250px;
+	}
+	#services .titleWrap > .title {
+		top: 20px; left: 9.473%;
+	}
+    
+    
+	/* spa section */
+    
+	#services {
+		background: url(../img/services-bg-pattern.jpg) no-repeat top 750px right -40px;
+		background-size: 212px;
+	}
+	#services .service_bg {
+		background-size: 2200px;
+	}
+	#services .spa {
+		margin-top: 121px;
+	}
+	#services .spa .spaWrap {
+		position: relative;
+	}
+	#services .spa .spaWrap > .spaImg {
+		width: 62.207%; height: 588px;
+		transform: translateX(20%);
+	}
+	#services .contents {
+		padding: 95px 0; 
+        margin-top: 0;
+	}
+	#services .spa .spaWrap > .contents { 
+		position: absolute; 
+        top: 0; right: 0;
+		width: 37.793%;
+		transform: translateX(-20%);
+	}
+	#services .spa .spaWrap > .contents b {
+		float: none;
+		position: static; 
+		margin-left: 10.336%; 
+        transform: translateY(0);
+		font-size: 5rem;
+	}
+	#services .spa .spaWrap > .contents .spaLine {
+		display: none;
+	}
+	#services .spa .spaWrap > .contents p {
+		float: none;
+		width: 74.935%;
+		margin-left: 10.336%; margin-top: 50px; margin-right: 0;
+		font-size: 1.8rem; 
+        line-height: 32px;
+	}
+    
+    
+	/* dinning section*/
+    
+	#services .dinning {
+		position: relative;
+		margin-top: 190px;
+	}
+	#services .dinning .dinningImg {
+		position: absolute; 
+        top:115px; right: 5.566%; 
+        z-index: 30;
+		width: 56.641%; height: 560px;
+		transform: translateX(-20%);
+	}
+	#services .dinning .dinningImg_bg {
+		position: absolute; 
+        top: 164px; right: 1%; 
+		width: 0; height: 560px;
+		background-color: #051f38; 
+        transition: 0.8s;
+	}
+	#services .dinning .dinningImg_bg.active {
+		width: 56.641%;
+	}
+	#services .dinning .contents {
+		width: 37.793%; 
+		margin-top: 0;
+        padding-top: 280px; padding-bottom: 0;
+		background-color: transparent;
+		transform: translateX(20%);
+	}
+	#services .dinning .contents b {
+		float: none;
+		position: static; 
+		margin-left: 14.729%; 
+        transform: translateY(0);
+		font-size: 5rem;
+	}
+	#services .dinning .contents .dinningLine {
+        display: none;
+    }
+	#services .dinning .contents p {
+		float: none;
+		width: 74.935%;
+		margin-left: 14.729%; margin-top: 50px; margin-right: 0;
+		font-size: 1.8rem; 
+        line-height: 32px;
+	}
+    
+    
+	/* restaurant section*/
+    
+	#services .restaurant {
+		position: relative;
+		width: 88.867%;
+		margin: 370px auto 0; 
+        overflow: hidden;
+	}
+	#services .restaurant .titleBox {
+		float: left;
+		width: 50px; height: 0;
+		margin-right: 3.516%;
+	}
+	#services .restaurant .titleBox.active {
+		height: 570px; width: 50px;
+	}
+	#services .restaurant .titleBox b {
+		right: 0;
+		margin-top: -15px; 
+        line-height: 50px;
+		-webkit-transform: rotate(-90deg);
+		-webkit-transform-origin: right bottom;
+        -ms-transform: rotate(-90deg);
+		-ms-transform-origin: right bottom; 
+        opacity: 0; 
+        transition: 0.8s;
+	}
+	#services .restaurant .titleBox b.active {
+		opacity: 1;
+	}
+	#services .restaurant .slideWrap {
+		width: 91%; height: 460px; 
+        overflow-x: hidden;
+	}
+	#services .restaurant .slideBox {
+		margin-top: 0; 
+        overflow: hidden;
+	}
+	.restaurant .slideBox .slideList > .slideImg {
+		float: left;
+		width: 31.733%;
+		margin-right: 2.4%; 
+	}
+    .restaurant .slideBox .slideList > div:last-child {
+        margin-right: 0;
+    }
+	#services .restaurant .slideBox .slideList > .slideImg > div {
+		width: 100%; height: 460px;
+		margin: 0;
+	}
+	#services .restaurant .slideBox .slideList > .slideImg > div > a {
+		font-size: 3.4rem; 
+        line-height: 1;
+		padding-top: 400px; 
+        transition: 0.3s;
+	}
+	.slideImg > div > div {
+		position: absolute; 
+        bottom: 50%; left: 50%;
+		width: 80%; height: 380px;
+		transform: translateX(-50%) translateY(50%);
+		transition: 0.3s; 
+		opacity: 0;
+	}
+	.slideImg > div > div > div > a {
+		display: block; 
+        position: relative;
+		width: 100px; height: 40px;
+		left: 50%; top: 20px;
+        margin-left: -50px;
+		background-color: #ff4b30; 
+		color: #fff; 
+        font-size: 1.8rem;
+        line-height: 40px;
+	}
+	.slideImg > div > div > div > a:after {
+		content: '';
+		width: 0; height: 1px;
+        position: absolute; 
+        bottom: 8px; left: 50%;
+        background-color: #fff; 
+        transition: 0.3s;
+	}
+	.slideImg > div > div > div > a:hover:after {
+		width: 40px;
+		margin-left: -20px;
+	}
+    .slideList > .slideImg > div:after {
+        display: none;
+    }
+	.cafe395Img {
+		background: url(../img/restaurant-cafe395.jpg) no-repeat center;
+	}
+	.genjiImg {
+		background: url(../img/restaurant-genji.jpg) no-repeat center;
+	}
+	.ilponteImg {
+		background: url(../img/restaurant-ilponte.jpg) no-repeat center;
+	}
+	#services .restaurant .vmBtn {
+		display: none;
+	}
+	.slideImg > div .rWrap > span:nth-child(odd) {
+		width: 0;
+        transition: 0.8s;
+	}
+	.slideImg > div:hover .rWrap > span:nth-child(odd) {
+		width: 100%; 
+	}
+	.slideImg > div .rWrap > span:nth-child(even) {
+		height: 0;
+        transition: 0.8s;
+	}
+	.slideImg > div:hover .rWrap > span:nth-child(even) {
+		height: 100%; 
+	}
+	.slideImg:hover > div > a {
+		transform: translateY(-40px); 
+	}
+	.slideImg:hover > div > div {
+		position: absolute; 
+        bottom: 50%; left: 50%;
+		width: 80%; height: 380px;
+		transform: translateX(-50%) translateY(50%);
+		opacity: 1; 
+	}
+	.slideImg > div > div .r_tWrap {
+		margin-top: 125px; 
+		color: #fff;
+	}
+	.slideImg > div > div .r_tWrap > p {
+		font-size: 2.4rem; 
+		line-height: 34px;
+	}
+    
+	
+	/* memory section*/
+    
+	#memory {
+		padding: 112px 0 255px;
+	}
+	#memory .titleWrap {
+		margin-left: 9.473%;
+	}
+	#memory .memoryWrap {
+		width: 81.055%;
+		margin-top: 110px;
+	}
+	#memory .memoryWrap .memoryContents > div {
+		height: 395px;
+	}
+	#memory .memoryWrap .memoryContents > div > .memoryTitle {
+		height: 80px;
+	}
+	#memory .memoryWrap .memoryContents > div > .memoryTitle > b {
+		margin-left: 32px;
+		line-height: 80px; 
+        font-size: 3.2rem;
+	}
+	#memory .memoryWrap .memoryContents > div > .memoryTitle > .memory_square {
+		width: 80px; height: 80px;
+	}
+    #memory .memoryWrap .memoryContents > div > .memoryTitle > .memory_square > a {
+        line-height: 80px;
+    }
+	#memory .memoryWrap .memoryContents > div > .memoryTitle > .memory_square > a > img {
+		height: 28px;
+	}
+	
+    
+	/* newsletter section*/
+    
+	#memory .newsletter {
+		margin-top: 130px;
+	}
+	#memory .newsletter .enterBox form input {
+		width: 80.361%; height: 50px;
+		padding-left: 2.169%; 
+        line-height: 50px;
+	}
+	#memory .newsletter .enterBox > form > button {
+		width: 17.47%; height: 50px;
+		font-size: 2rem;
+	}
+	#memory .newsletter .agreeBox {
+		padding-top: 60px;
+	}
+	
+	
+	/* footer */
+    
+	footer {
+		padding-bottom: 75px;
+	}
+	footer .footerWrap {
+		width: 88.867%;
+	}
+	footer .footerWrap .footerContents {
+		overflow: hidden;
+	}
+	footer .footerWrap .footerContents > .contact {
+		float: left;
+		width: 36.264%;
+	}
+	footer .footerWrap .footerContents > .contact > div:first-child {
+		float: none;
+		margin-bottom: 60px;
+	}
+	footer .footerWrap .footerContents > .contact > div:last-child {
+		float: none;
+	}
+	footer .footerWrap .footerContents > .contact > div > ul {
+		margin-left: 24.545%;
+	}
+	footer .footerWrap .footerContents > .contact > div:last-child > b {
+		margin-right: 0;
+	}
+	footer .footerWrap .footerContents .contact .bookWrap ul > li:first-child {
+		margin-bottom: 15px;
+		font-size: 1.6rem;
+	}	
+	footer .footerWrap .footerContents .contentsWrap {
+		float: right;
+		width: 63.736%;
+		margin-top: 0;
+	}
+	footer .footerWrap .footerContents .sitemap > ul > li {
+		margin-right: 4%;
+	}
+	footer .footerWrap .footerContents .sitemap > ul > li:nth-child(3) {
+		margin-right: 4%;
+	}
+}
+
+
+
+
+/* pc 1920 */
+
+@media only screen and (min-width: 1300px){
+	
+	.title { font-size: 70px; }
+    
+	
+	/* header */
+    
+	#header .navWrap .navLogo {
+		left: 5.729%; /* 110/1920 */
+	}
+	#header .navWrap .navBtn {
+		right: 5.729%;
+	}
+	nav .menu {
+		left: 13.281%;
+	}
+	nav img {
+		right: 13.281%;
+		width: 300px;
+	}
+	
+    
+	/* visual */
+    
+	.visual > .visualWrap {
+		width: 88.542%;
+		margin-left: -44.271%;
+	}
+	.visual > .visualWrap .visual_outline .visual_inline {
+		width: 97.529%;
+		margin-left: 1.176%;
+	}
+
+	
+	/* seoul section*/
+    
+	#seoul {
+		background-size: 610px; 
+        background-position: right -10px top -50px;
+	}
+	#seoul .seoul_square {
+		margin-left: 5.729%;
+	}
+	#seoul .seoul_square .titleWrap {
+		left: 30%; 
+	}
+	#seoul .seoul_contentsWrap {
+		width: 80.99%; /* 1555/1920 */
+		margin-left: 5.729%;
+	}
+	#seoul .seoul_contentsWrap .seoulImg {
+		width: 49.839%; /* 775/1555 */
+		background-position: center;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt {
+		width: 37.299%;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt .navy_bar {
+		height: 15px;
+		margin-bottom: 36px;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt p {
+		font-size: 2rem; 
+        line-height: 32px;
+		margin-bottom: 80px;
+	}
+	#seoul .seoul_contentsWrap .seoul_txt .seoulBtn {
+		width: 230px; height: 60px; 
+	}
+
+	
+	/* room section*/
+    
+	#rooms > div {
+		width: 88.541%; /* 1700/1920 */
+	}
+	#rooms > div > div {
+		width: 31.765%; /* 540/1700 */
+		margin-right: 2.354%;
+	}
+	#rooms > div > div > b {
+		font-size: 6rem;
+	}
+	#rooms > div > div > div > .borderBox {
+		width: 83.333%; /* 450/540 */ height: 730px;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > b {
+		font-size: 5rem;
+	}
+	#rooms > div > div > div > .borderBox > .textWrap > p {
+		width: 85%; margin: 65px auto 90px;
+	}
+
+	
+	/* service section */
+	#services .titleWrap .square_services {
+		height: 60px;
+		margin-left: 19.948%;
+	}
+	#services .titleWrap .square_services.active {
+		width: 270px;
+	}
+	#services .titleWrap > .title {
+		top: 28px; left: 11.198%;
+	}
+	
+	/* spa section*/
+    
+	#services {
+		background-position: top 690px right 0;
+		background-size: 350px;
+	}
+	#services .spa {
+		margin-top: 106px;
+	}
+	#services .spa .spaWrap {
+		width: 100%; 
+		background-color: #051f38;
+        opacity: 0;
+        transition: 0.8s;
+	}
+	#services .spa .spaWrap.active {
+		opacity: 1;
+	}
+	#services .spa .spaWrap > .spaImg {
+		position: absolute; 
+        top: 0; left: 5.729%;
+		width: 50.781%;
+	}
+	#services .spa .spaWrap > .contents {
+		position: static;
+		width: 20.573%; 
+        margin-left: 66.146%;
+		padding: 95px 0;
+	}
+	#services .spa .spaWrap > .contents b {
+		margin-left: 0;
+		font-size: 5.5rem;
+	}
+	#services .spa .spaWrap > .contents p {
+		width: 100%;
+		margin-left: 0; margin-top: 45px;
+		font-size: 2rem; 
+	}
+	
+    
+	/* dinning section */
+    
+	#services .dinning {
+		margin-top: 327px;
+	}
+	#services .dinning .dinningImg {
+		top: 113px; right: 13.281%;
+		width: 43.958%;
+	}
+	#services .dinning .dinningImg_bg {
+		top: 148px; right: 5.729%;
+	}
+	#services .dinning .dinningImg_bg.active {
+		width: 43.958%;
+	}
+	#services .dinning .contents {
+		width: 100%; 
+        padding-top: 265px;
+	}
+	#services .dinning .contents b {
+		margin-left: 13.281%; margin-bottom: 20px;
+	}
+	#services .dinning .contents p {
+		width: 24.925%;
+		margin-left: 13.281%;
+		font-size: 2rem; 
+	}
+	
+    
+	/* restaurant section*/
+    
+	#services .restaurant {
+		width: 75.521%; /* 1450/1920 */
+        margin-top: 405px;
+	}
+	#services .restaurant .titleBox {
+		margin-right: 3.793%; /* 55/1450 */
+	}
+	#services .restaurant .slideWrap {
+		position: relative;
+	}
+	.restaurant .slideBox .slideList > .slideImg {
+		width: 32.59%; /* 420/1345 */
+		margin-right: 1.115%; /* 15/1345 */
+	}
+	
+    
+	/* memory section */
+    
+	#memory {
+		padding: 180px 0 290px;
+	}
+	#memory .titleWrap {
+		margin-left: 5.729%;
+	}
+    #memory .titleWrap:after {
+        margin-left: 59px;
+    }
+    #memory .titleWrap.active:after {
+        width: 500px;
+    }
+	#memory .memoryWrap {
+		width: 88.542%; /* 1700/1920 */
+	}
+	#memory .memoryWrap .memoryContents > div {
+		width: 23.235%;
+		margin-right: 2.352%; margin-bottom: 0;
+        background-size: auto 100%;
+	}
+    #memory .memoryWrap .memoryContents > div:hover {
+        background-size: auto 110%;
+    }
+    #memory .memoryWrap .memoryContents > div:nth-child(2) {
+        margin-right: 2.352%;
+    }
+
+    
+	/* newsletter section */
+    
+	#memory .newsletter {
+		width: 48.823%; /* 830/1700 */
+		margin: 230px auto 0;
+	}
+    #memory .newsletter .enterBox form input {
+        width: 76.348%;
+    }
+	#memory .newsletter .enterBox > form > button {
+		width: 21.43%; height: 50px;
+		font-size: 1.8rem;
+	}
+    
+	
+	/* footer */
+    
+    footer {
+        padding-top: 53px;
+    }
+	footer .footerWrap { width: 88.542%; /* 1700/1920 */ }
+    footer .footerWrap > img { width: 152px; }
+    footer .footerWrap > .footerUnderline { margin: 53px 0 70px; }
+    footer .footerWrap .footerContents, footer .footerWrap .footerContents .sitemap > ul > li a { font-size: 2.2rem; }
+	footer .footerWrap .footerContents > .contact { width: 34.118%; /* 580/1700 */ }
+	footer .footerWrap .footerContents > .contact > div:first-child { margin-bottom: 67px; }
+	footer .footerWrap .footerContents > .contact > div  ul { margin-left: 18.621%; }
+    footer .footerWrap .footerContents > .contact > div:first-child > ul, footer .footerWrap .footerContents .contact .bookWrap ul > li:first-child, footer .footerWrap .footerContents > .contact > div:last-child > ul {
+        font-size: 1.8rem;
+    }
+	footer .footerWrap .footerContents .contact .bookWrap ul > li:first-child { margin-bottom: 23px; }	
+	footer .footerWrap .footerContents .contentsWrap { width: 65.882%; /* 1120/1700 */ }
+    footer .footerWrap .footerContents .contentsWrap .copy > b { font-size: 2.5rem; }
+    footer .footerWrap .footerContents .sitemap { padding-top: 53px; }
+	footer .footerWrap .footerContents .sitemap > ul > li, footer .footerWrap .footerContents .sitemap > ul > li:nth-child(3) { margin-right: 3.571%;
+	}
+    footer .footerWrap .footerContents .snsWrap ul > li {
+        width: 23.026%;
+        margin-right: 15.461%;
+    }
+}
+
+
+
+/* keyframes */
+
+
+@keyframes svgFill {
+	0% {
+		fill: rgba(255,255,255,0);
+	}
+	100% {
+		fill: rgba(255,255,255,1);
+	}
+}
+
+@keyframes wSizeUp{
+	0% {
+        width: 0;
+    }
+	100% {
+        width: 100%;
+    }
+}
+
+@keyframes hSizeUp{
+	0% {
+        height: 0;
+    }
+	100% {
+        height: 100%;
+    }
+}
+	

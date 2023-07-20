@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="logo"><img src="img/logo.png"/></h1>
+    <div class="js_clock">
+        <h1 class="clock_tit">00:00</h1>
+    </div>
+    <form class="js_form form">
+        <input class="name_input" type="text" placeholder="&#10024; What is your name?" />
+    </form>
+    <h4 class="js_greetings greetings"></h4>
+    <form action="" class="js_todoForm">
+        <input type="text" placeholder=" &#128221; Write down what to do" />
+    </form>
+    <ul class="js_toDoList"></ul>
+    <div class="js_weather">
+        <h3> Today's weather is ...</h3>
+        <p>
+            <img class="weatherImg" src="" alt="weather" /> 오늘의 날씨:&nbsp;<span class="T-weather"></span>
+        </p>
+        <p>
+            &#128167; 현재습도:&nbsp;<span class="current_humidity"></span>
+        </p>
+        <p>
+            &#127773; 현재기온:&nbsp;<span class="current_temp"></span> &#11014; 최고기온:&nbsp;<span class="max_temp"></span> &#11015; 최저기온:&nbsp;<span class="min_temp"></span>
+        </p>
+    </div>
+    <p>&#127968; <span class="js_place"></span></p>
+
+    <!-- script -->
+    <script src="https://kit.fontawesome.com/86f00f2bf6.js" crossorigin="anonymous"></script>
+    <script defer src="js/clock.js"></script>
+    <script defer src="js/greeting.js"></script>
+    <script defer src="js/todo.js"></script>
+    <script defer src="js/bg.js"></script>
+    <script defer src="js/weather.js"></script>
+</body>
+</html>
