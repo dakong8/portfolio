@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="KimDaBin" />
+    <meta name="description" content="웹 퍼블리셔 김다빈의 미니 포트폴리오 사이트입니다." />
+    <meta name="keywords" content="반응형사이트, 웹퍼블리셔, 웹접근성, 미니포트폴리오">
+    <title>DB's mini-portfolio</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+    <div class="navbar__logo">
+        <img src="img/logo.png" alt="logo" />
+        <span>DaBin</span>
+    </div>
+    <ul class="navbar__menu">
+        <li class="active navbar__menu__item" data-link="#home">Home</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#work">My work</li>
+        <li class="navbar__menu__item" data-link="#testimonials">
+        Testimonials
+        </li>
+        <li class="navbar__menu__item" data-link="#contact">Contact</li>
+    </ul>
+    <button class="navbar__toogle_btn">
+        <i class="fas fa-bars"></i>
+    </button>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+    <img src="img/profile.jpg" alt="profile" class="home__avatar" />
+    <h1 class="home__title">HELLO!<br />I'm DaBin</h1>
+    <h2 class="home__desc">I'm a newcomer, <span>ever-growing publisher</span></h2>
+    <button class="home__contact">Contact me</button>
+    </section>
+    <!-- about -->
+    <section id="about" class="section section__container">
+    <h1>About me</h1>
+    <p>
+        안녕하세요. 웹 퍼블리셔를 꿈꾸는 김다빈입니다. 무엇이든 즐길 수 있으면 좋은 결과를 얻을 수 있다고 생각합니다. 모든 것에 대해 긍정적으로 생각하고 좌절하기보다는 어려움을 극복하려고 노력할 것이고, 앞으로 배움에 있어 겸손함을 유지하며 끊임없이 성장하는 웹 퍼블리셔가 되도록 노력하겠습니다.
+    </p>
+    <div class="about_majors">
+        <div class="major">
+        <div class="major__icon"><i class="fab fa-html5"></i></div>
+        <h2 class="major__title">Publisher</h2>
+        <div class="major__desc">
+            웹 퍼블리셔가 되기 위해 하루에 4시간 이상 코딩 연습을 하고 있습니다.
+        </div>
+        </div>
+        <div class="major">
+        <div class="major__icon"><i class="fab fa-css3-alt"></i></div>
+        <h2 class="major__title">Front-end</h2>
+        <div class="major__desc">
+            자바스크립트 라이브러리와 프레임워크의 중요성이 커짐에 
+            따라 React와 Vue에 대응하는 방법을 배우고 있습니다.
+        </div>
+        </div>
+        <div class="major">
+        <div class="major__icon"><i class="fab fa-js-square"></i></div>
+        <h2 class="major__title">Developer</h2>
+        <div class="major__desc">
+            몇 년 후 Back-end까지 섭렵하는 유능한 개발자가 되도록 노력하겠습니다.
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- skills -->
+    <section id="skills" class="section">
+    <div class="section__container">
+        <h1>Skills</h1>
+        <h2>Skills &AMP; Attributes</h2>
+        <p>
+        도전을 두려워하지 않고 끊임없이 성장하고 발전하기 위해 모든 것에 대해 긍정적으로 생각하고 어려움을 극복하려고 노력할 것입니다. 또한, 항상 주변 사람들의 말에 귀 기울이고 그들과 지속적으로 소통하며 자신을 발전시키려고 노력할 것이며, 나아가 주변 사람들에게도 긍정적인 영향을 미치려고 노력할 것입니다.
+        </p>
+        <div class="skillset">
+        <div class="skillset__left">
+            <h3 class="skillset__title">Skills</h3>
+            <div class="skill">
+            <div class="skill__desc">
+                <span>HTML</span>
+                <span>90%</span>
+            </div>
+            <div class="skill__bar">
+                <div class="skill__value" style="width: 90%;"></div>
+            </div>
+            </div>
+            <div class="skill">
+            <div class="skill__desc">
+                <span>CSS</span>
+                <span>90%</span>
+            </div>
+            <div class="skill__bar">
+                <div class="skill__value" style="width: 90%;"></div>
+            </div>
+            </div>
+            <div class="skill">
+            <div class="skill__desc">
+                <span>JavaScript</span>
+                <span>70%</span>
+            </div>
+            <div class="skill__bar">
+                <div class="skill__value" style="width: 70%;"></div>
+            </div>
+            </div>
+            <div class="skill">
+            <div class="skill__desc">
+                <span>J-Query</span>
+                <span>75%</span>
+            </div>
+            <div class="skill__bar">
+                <div class="skill__value" style="width: 75%;"></div>
+            </div>
+            </div>
+            <div class="skill">
+            <div class="skill__desc">
+                <span>Photoshop</span>
+                <span>90%</span>
+            </div>
+            <div class="skill__bar">
+                <div class="skill__value" style="width: 90%;"></div>
+            </div>
+            </div>
+            <div class="skill">
+            <div class="skill__desc">
+                <span>Illustration</span>
+                <span>80%</span>
+            </div>
+            <div class="skill__bar">
+                <div class="skill__value" style="width: 80%;"></div>
+            </div>
+            </div>
+        </div>
+        <div class="skillset__right">
+            <div class="tools">
+            <h3 class="skillset__title">Tools</h3>
+            <ul class="tools__list">
+                <li><span>Visual Studio Code</span></li>
+                <li><span>IntelliJ</span></li>
+                <li><span>ATOM</span></li>
+                <li><span>Bracket</span></li>
+                <li><span>Sketch app</span></li>
+            </ul>
+            </div>
+            <div class="etc">
+            <h3 class="skillset__t">Etc</h3>
+            <ul class="ect__list">
+                <li><span>Git</span></li>
+                <li><span>Scrum Master</span></li>
+                <li><span>Math</span></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- work -->
+    <section id="work" class="section">
+    <h1>My work</h1>
+    <h2>Projects</h2>
+    <div class="work_catagories">
+        <button class="category__btn selected" data-filter="*">
+        All<span class="category__count">8</span>
+        </button>
+        <button class="category__btn" data-filter="Web Accessibility">
+        Web Accessibility<span class="category__count">2</span>
+        </button>
+        <button class="category__btn" data-filter="Responsive">
+        Responsive<span class="category__count">3</span>
+        </button>
+        <button class="category__btn" data-filter="Renewal">
+        Renewal<span class="category__count">3</span>
+        </button>
+    </div>
+    <div class="work__projects section__container">
+        <a href="http://iok483.dothome.co.kr/pandora/index.html" data-type="Web Accessibility" class="project" target="blank">
+        <img src="img/work1.jpg" alt="프로젝트1" />
+        <div class="project__desc">
+            <h3>Renewal site</h3>
+            <span>PANDORA - Reponsive Website</span>
+        </div>
+        </a>
+        <a href="http://iok483.dothome.co.kr/pandora/index.html" data-type="Web Accessibility" class="project" target="blank">
+        <img src="img/work2.jpg" alt="프로젝트2" />
+        <div class="project__desc">
+            <h3>Renewal site</h3>
+            <span>PANDORA - Reponsive Website</span>
+        </div>
+        </a>
+        <a href="http://iok483.dothome.co.kr/pandora/index.html" data-type="Responsive" class="project" target="blank">
+        <img src="img/work3.jpg" alt="프로젝트3" />
+        <div class="project__desc">
+            <h3>Renewal site</h3>
+            <span>PANDORA - Reponsive Website</span>
+        </div>
+        </a>
+        <a href="http://iok483.dothome.co.kr/pandora/index.html" data-type="Responsive" class="project" target="blank">
+        <img src="img/work4.jpg" alt="프로젝트4" />
+        <div class="project__desc">
+            <h3>Renewal site</h3>
+            <span>PANDORA - Reponsive Website</span>
+        </div>
+        </a>
+        <a href="http://iok483.dothome.co.kr/pandora/index.html" data-type="Responsive" class="project" target="blank">
+        <img src="img/work5.jpg" alt="프로젝트5" />
+        <div class="project__desc">
+            <h3>Renewal site</h3>
+            <span>PANDORA - Reponsive Website</span>
+        </div>
+        </a>
+        <a href="http://iok483.dothome.co.kr/pandora/index.html" data-type="Renewal" class="project" target="blank">
+        <img src="img/work6.jpg" alt="프로젝트6" />
+        <div class="project__desc">
+            <h3>Renewal site</h3>
+            <span>PANDORA - Reponsive Website</span>
+        </div>
+        </a>
+        <a href="http://iok483.dothome.co.kr/pandora/index.html" data-type="Renewal" class="project" target="blank">
+        <img src="img/work7.jpg" alt="프로젝트7" />
+        <div class="project__desc">
+            <h3>Renewal site</h3>
+            <span>PANDORA - Reponsive Website</span>
+        </div>
+        </a>
+        <a href="http://iok483.dothome.co.kr/pandora/index.html" data-type="Renewal" class="project" target="blank">
+        <img src="img/work8.jpg" alt="프로젝트8" />
+        <div class="project__desc">
+            <h3>Renewal site</h3>
+            <span>PANDORA - Reponsive Website</span>
+        </div>
+        </a>
+    </div>
+    </section>
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+    <div class="section__container">
+        <h1>Testimonials</h1>
+        <h2>See what they say about me</h2>
+        <div class="testimonials">
+        <div class="testimonial">
+            <img
+            src="img/people1.png"
+            alt="아바타"
+            class="testimonial__avatar"
+            />
+            <div class="testimonial__speech-bubble">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                quam voluptatum accusantium mollitia expedita odio est
+                reiciendis voluptatum accusantium mollitia expedita odio est
+                reiciendis cupiditate cupiditate vitae harum?
+            </p>
+            <p class="name"><a href="#">A company</a> / B company</p>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial__speech-bubble">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+                quam voluptatum accusantium mollitia expedita odio est
+                reiciendis cupiditate vitae harum? voluptatum accusantium
+                mollitia expedita odio est reiciendis cupiditate
+            </p>
+            <p class="name"><a href="#">A company</a> / B company</p>
+            </div>
+            <img
+            src="img/people2.png"
+            alt="아바타"
+            class="testimonial__avatar"
+            />
+        </div>
+        </div>
+    </div>
+    </section>
+    <!-- contact -->
+    <section id="contact" class="section">
+    <h1 class="contact__title">Contact me</h1>
+    <h2 class="contact__email">iok483@naver.com</h2>
+    <p class="contact__rights">
+        &copy; 2021. Dabin-Kim All rights reserved.
+    </p>
+    </section>
+    <!-- Arrow up button -->
+    <button>
+    <div class="upBtn visible">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    </button>
+
+    <!-- script -->
+    <script src="js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/86f00f2bf6.js" crossorigin="anonymous"></script>
+</body>
+</html>
